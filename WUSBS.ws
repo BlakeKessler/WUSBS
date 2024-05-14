@@ -1,0 +1,13 @@
+PROJECT_NAME = WUSBS
+PROJECT_VERSION = 0-0.0.0-0
+
+BUILD_DIR = bin
+MAKEFILE = WUSBS.mk
+#TARGET = WUSBS-0-0.0.0-0.o
+TARGET = WUSBS.o
+
+HEADERS = src/defines.h
+MAIN = src/main.cpp
+
+COMPILER = g++
+STD = c++23
