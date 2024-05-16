@@ -5,10 +5,10 @@
 
 //deduce language and call appropriate map initializer function
 bool CommandMap::initFromLang() {
-   if (_lang == CPP_STR) {
+   // if (_lang == CPP_STR) {
       initCPP();
       return true;
-   }
+   // }
 
    //deduction failed
    ThrowErrWUSBS("'" + _lang + "' is not supported by WUSBS");

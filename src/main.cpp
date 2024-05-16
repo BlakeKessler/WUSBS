@@ -16,6 +16,7 @@ int main(int argc, char** argv) {
    
    //process arguments
    const std::string wusbsFilePath(argv[1]);
+   const std::string lang(argv[2]);
 
    //read WUSBS file
    CommandMap commandMap(wusbsFilePath);
