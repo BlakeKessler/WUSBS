@@ -1,0 +1,45 @@
+ROOT:
+   The root directory of the project. All relative paths will be relative to the root. 
+   If not specified, the current working directory is used as the root.
+
+HEADERS:
+   All header files for the project. Paths can be global or relative to the root.
+   By default, the header extensions are ".hpp" and ".h".
+SOURCES:
+   All source code files for the project (implementations, not headers). Paths can be global or relative to the root.
+   By default, the source extensions are ".cpp", ".cxx", ".c", and ".cc".
+MAIN:
+   The file containing the main() function. Paths can be global or relative to the root.
+
+TARGET:
+   The name of the output executable file.
+   If not specified, ${MAIN} will be used to generate the output executable name.
+BUILD_DIR:
+   The path to the build directory. All executables and object files will be created there.
+   If not specified, ${ROOT}/bin will be used as the build directory.
+
+L:
+   Files to be passed to -L flags
+l:
+   Files to be passed to -l flags
+I:
+   Files to be passed to -I flags
+
+COMPILER:
+   Compile command. EX: "clang++", "g++"
+STD:
+   Version of the standard library used to compile (passed to -std flag)
+FLAGS:
+   Compiler flags to be used for all build versions.
+   EX: "-Wall", "-Wextra"
+DEBUG_FLAGS:
+   Compiler flags to be passed only to debug builds (in addition to the contents of FLAGS).
+   EX: "-g"
+RELEASE_FLAGS:
+   Compiler flags to be passed only to release builds (in addition to the contents of FLAGS).
+   EX: "-O3"
+
+PROJECT_NAME:
+   The project that is being built.
+PROJECT_VERSION:
+   The version of the project that is being developed.
