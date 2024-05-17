@@ -2,7 +2,6 @@
 #define COMMAND_MAP_CPP
 
 #include "CommandMap.h"
-   #include <iostream>
 
 //returns if the processing of the line should continue
 bool CommandMap::preProcessFile(const std::string& rawLine, std::string&code, std::string& comments) const {
@@ -27,16 +26,10 @@ bool CommandMap::preProcessFile(const std::string& rawLine, std::string&code, st
    return code.size() > 0;
 }
 
-CommandMap::CommandMap(const CommandMap& other) {
-   _commandMapPtr = other._commandMapPtr;
-   _lang = other._lang;
-}
-
 //construct command map from WUSBS file
-CommandMap::CommandMap(const std::string& path, const std::string& lang) {
+CommandMap::CommandMap(const std::string& path) {
    //initialize map
-   _lang = lang;
-   initFromLang();
+   init();
    
    //load WUSBS file
    std::ifstream reader(path);
@@ -68,7 +61,7 @@ CommandMap::CommandMap(const std::string& path, const std::string& lang) {
 }
 
 //access arguments for a command
-//throws an error if an invalid command for the language is used
+//throws an error if an invalid command is used
 ArgVec& CommandMap::operator[](const std::string& command) {
    if (!_commandMapPtr->contains(command)) {
       ThrowErrWUSBS("'" + command + "' is not a valid WUSBS command");

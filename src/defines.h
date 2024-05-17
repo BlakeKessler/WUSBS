@@ -8,7 +8,8 @@
 
    #define CPP_STR "C++"
 
-   #define DEFAULT_COMPILER {"g++"}
+   #define DEFAULT_LANG {"g++"}
+   #define DEFAULT_COMPILER {"clang++"}
    #define DEFAULT_HEADER_EXTENSIONS {"hpp", "h"}
    #define DEFAULT_SOURCE_EXTENSIONS {"cpp", "cxx", "c", "cc"}
    // #define DEFAULT_STD {"c++23"}

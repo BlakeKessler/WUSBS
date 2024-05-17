@@ -1,9 +1,9 @@
 # Wildly Unsafe Simple Build System (W.U.S.B.S.)
 
-WUSBS is currently a simple build system for **C/C++** and the _gcc/g++_ compiler. It produces Makefiles, so _Make_ is needed to actually compile anything.  
-Compatibility with other compilers is planned - primarily _clang_, but potentially for compilers for other languages as well.  
+WUSBS is currently a simple build system for **C/C++**. It produces Makefiles, so _Make_ is needed to actually compile anything.  
+It is designed around clang++ and g++, but support for other compilers and languages is planned.  
 WUSBS will likely work properly on any computer running a Linux, Windows, or Mac operating system, but this has not yet been tested. It has currently only been tested on Ubuntu, but it should work on any OS that runs C++ and Make.
-You could do some hacky bodging to make this WUSBS snapshot use any compilers that use similar syntax to g++, but that definitely manifests the wild unsafety alluded to by the name of the project (even clang usually doesn't work properly yet, but that will be fixed by the first stable release).  
+You could do some hacky bodging to make this WUSBS snapshot use any compilers that use similar syntax to g++, but that definitely manifests the wild unsafety alluded to by the name of the project.  
 
 The not all of the commands listed in [the commands file](docs/commands.txt) are implemented yet (as described or at all). They will all be either implemented or removed by the first full release.  
 

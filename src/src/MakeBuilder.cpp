@@ -14,12 +14,6 @@ const std::string MakeBuilder::writeMakeRule(const std::vector<ArgVec>& lines) {
 
 //public constructor from language
 //throws an error if an unsupported language is used
-MakeBuilder::MakeBuilder(const std::string& lang) {
-   _commandMap = CommandMap(lang);
-}
-
-//public constructor from language
-//throws an error if an unsupported language is used
 MakeBuilder::MakeBuilder(CommandMap& commands) {
    _commandMap = commands;
 }

@@ -3,21 +3,10 @@
 
 #include "CommandMap.h"
 
-//deduce language and call appropriate map initializer function
-bool CommandMap::initFromLang() {
-   // if (_lang == CPP_STR) {
-      initCPP();
-      return true;
-   // }
-
-   //deduction failed
-   ThrowErrWUSBS("'" + _lang + "' is not supported by WUSBS");
-   return false;
-}
-
 //initialize a WUSBS command map for C++
-bool CommandMap::initCPP() {
+bool CommandMap::init() {
    _commandMapPtr = std::make_shared<std::unordered_map<std::string, ArgVec>>();
+   (*_commandMapPtr)["LANGUAGE"] = DEFAULT_LANG;
    (*_commandMapPtr)["COMPILER"] = DEFAULT_COMPILER;
    (*_commandMapPtr)["STD"] = {};
    (*_commandMapPtr)["FLAGS"] = DEFAULT_FLAGS;
@@ -34,7 +23,7 @@ bool CommandMap::initCPP() {
    (*_commandMapPtr)["MAIN"] = DEFAULT_MAIN;
    (*_commandMapPtr)["L"] = {};
    (*_commandMapPtr)["l"] = {};
-   (*_commandMapPtr)["i"] = {};
+   (*_commandMapPtr)["I"] = {};
    
    (*_commandMapPtr)["PROJECT_NAME"] = {};
    (*_commandMapPtr)["PROJECT_VERSION"] = {};

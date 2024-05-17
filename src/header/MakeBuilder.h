@@ -15,7 +15,7 @@ class MakeBuilder {
       bool generateCommandMap();
       const std::string writeMakeRule(const std::vector<ArgVec>& lines);
    public:
-      MakeBuilder(const std::string& lang = CPP_STR);
+      MakeBuilder();
       MakeBuilder(CommandMap& commands);
       ArgVec& operator[](const std::string& command);
       bool build();
