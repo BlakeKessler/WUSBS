@@ -8,13 +8,13 @@
 
    #define CPP_STR "C++"
 
-   #define DEFAULT_LANG {"g++"}
+   #define DEFAULT_LANG {"C++"}
    #define DEFAULT_COMPILER {"clang++"}
-   #define DEFAULT_HEADER_EXTENSIONS {"hpp", "h"}
+   #define DEFAULT_FILE_EXTENSIONS {"hpp", "h"}
    #define DEFAULT_SOURCE_EXTENSIONS {"cpp", "cxx", "c", "cc"}
    // #define DEFAULT_STD {"c++23"}
    #define DEFAULT_FLAGS {"-Wall", "-Wextra"} //maybe add -xc++-header
-   #define DEFAULT_DEBUG_FLAGS {"-g", "-Og"}
+   #define DEFAULT_DEBUG_FLAGS {"-g", "-Og", "--debug"}
    #define DEFAULT_RELEASE_FLAGS {"-O3"}
    #define DEFAULT_MAIN {"main.cpp"}
    #define DEFAULT_ROOT {"."}

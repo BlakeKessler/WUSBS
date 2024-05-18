@@ -7,7 +7,10 @@
 #include "CommandMap.h"
 
 #include <string>
-#include <fstream>
+// #include <fstream>
+#include <iosfwd>
+
+//maybe use formatted strings/print
 
 class MakeBuilder {
    private:

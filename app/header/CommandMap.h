@@ -7,8 +7,9 @@
 #include <unordered_map>
 #include <memory>
 #include <string>
-#include <strstream>
-#include <fstream>
+#include <spanstream>
+// #include <fstream>
+#include <iosfwd>
 
 class CommandMap {
    private:

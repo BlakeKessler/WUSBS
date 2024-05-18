@@ -11,7 +11,7 @@ bool CommandMap::preProcessFile(const std::string& rawLine, std::string&code, st
    }
 
    //put commented and un-commented sections of the line in the appropriate output strings
-   std::istrstream preStream(rawLine.c_str());
+   std::ispanstream preStream(rawLine);
    while (preStream.good()) {
       //read from raw line
       code += read(preStream, COMMENT_DELIM);
@@ -46,7 +46,7 @@ CommandMap::CommandMap(const std::string& path) {
       }
       
       //extract command
-      std::istrstream commandStream(code.c_str());
+      std::ispanstream commandStream(code);
       const std::string command = read(commandStream, COMMAND_DELIM);
 
       //find and clear appropriate list of arguments
